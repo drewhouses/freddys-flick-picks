@@ -1,0 +1,41 @@
+body,
+html {
+    height: 100%;
+}
+
+.image-container {
+    /* Freddy image */
+    background-image: url("https://wallpapercave.com/wp/Kdo1nO2.png");
+
+    /* Full height to cover whole page */
+    height: 100%;
+
+    /* Center and scale the image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* aligns button to the center */
+    text-align: center;
+}
+
+/* css for cover page button */
+.cover-btn {
+    position: relative;
+    top: 35vh;
+    left: 6vh;
+    background-color: black;
+    color: black;
+    border: none;
+    font-family: fantasy;
+    font-size: x-large;
+}
+
+/* hover over Freddy's body to find button */
+.cover-btn:hover {
+    color: darkred;
+}
+
+.hide {
+    display: none;
+}
