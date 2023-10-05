@@ -1,3 +1,4 @@
+/* background-color: #001e09; freddy's green stripe*/
 body,
 html {
     height: 100%;
@@ -41,6 +42,7 @@ html {
     display: none;
 }
 
+/* Freddy's Flick Picks! */
 h1 {
     text-align: center;
     background-color: #8a0303;
@@ -50,4 +52,20 @@ h1 {
     padding-top: 10px;
 }
 
-/* background-color: #001e09; freddy's green stripe*/
+
+/* WORK ON LATER */
+/* .btn-container {
+    height: 200px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    background-color: #181818;
+}
+
+.last-btns {
+    color: aqua;
+} */
