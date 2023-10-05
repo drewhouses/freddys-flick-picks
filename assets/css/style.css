@@ -53,5 +53,14 @@ h1 {
     padding-top: 10px;
     font-family: 'Butcherman', cursive;
 }
-
 /* background-color: #001e09; freddy's green stripe*/
+
+.form-container {
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.form-container p {
+    margin: 20px;
+}
