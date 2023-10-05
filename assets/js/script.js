@@ -1,4 +1,5 @@
 var enterButtonEl = $(".cover-btn");
+var fredsound = $("#fredSounds").muted = true;
 
 //audio section
 var freddyCoverAudio = new Audio("thriller-ambient-14563.mp3");
