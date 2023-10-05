@@ -1,7 +1,7 @@
-
 body,
 html {
     height: 100%;
+    background-color: #181818;
 }
 
 .image-container {
@@ -43,8 +43,11 @@ html {
 
 h1 {
     text-align: center;
-    background-color: red;
+    background-color: #8a0303;
+    color: whitesmoke;
     font-weight: bold;
     height: 50px;
     padding-top: 10px;
 }
+
+/* background-color: #001e09; freddy's green stripe*/
