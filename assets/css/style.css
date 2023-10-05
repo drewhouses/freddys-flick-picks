@@ -44,14 +44,28 @@ html {
 
 /* Freddy's Flick Picks! */
 h1 {
+    /*Added font size black color for header*/
+
+    font-size: 30px;
     text-align: center;
     background-color: #8a0303;
     color: whitesmoke;
     font-weight: bold;
     height: 50px;
     padding-top: 10px;
+    font-family: 'Butcherman', cursive;
+}
+/* background-color: #001e09; freddy's green stripe*/
+
+.form-container {
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
 }
 
+.form-container p {
+    margin: 20px;
+}
 
 /* WORK ON LATER */
 /* .btn-container {
@@ -69,3 +83,6 @@ h1 {
 .last-btns {
     color: aqua;
 } */
+
+
+
