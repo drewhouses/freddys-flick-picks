@@ -1,8 +1,6 @@
 var enterButtonEl = $(".cover-btn");
 var fredsound = ($("#fredSounds").muted = true);
 var generateBtnEl = $(".generate-movie-btn");
-var token =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OGY0ZWU1MDRiNWRiZDc5Y2YxZTQ5MTBkOTIzNDA5ZiIsInN1YiI6IjY1MTM4NmUxYTE5OWE2MDBlMWY5ZTNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PcGD68kcdBrYlLNbkoPTnlaqeM4K2hlc6WddR0Q1Nns";
 
 //audio section
 var freddyCoverAudio = new Audio("thriller-ambient-14563.mp3");
@@ -28,6 +26,8 @@ generateBtnEl.on("click", function () {
 });
 
 function getRandomMovie() {
+  var token =
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OGY0ZWU1MDRiNWRiZDc5Y2YxZTQ5MTBkOTIzNDA5ZiIsInN1YiI6IjY1MTM4NmUxYTE5OWE2MDBlMWY5ZTNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PcGD68kcdBrYlLNbkoPTnlaqeM4K2hlc6WddR0Q1Nns";
   var randomPageNumber = Math.floor(Math.random() * 40);
   fetch(
     `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&with_original_language=en&with_genres=27&page=${randomPageNumber}&sort_by=popularity.desc`,
