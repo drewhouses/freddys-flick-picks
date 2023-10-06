@@ -44,17 +44,21 @@ function getRandomMovie() {
     })
     .then(function (data) {
       console.log(data);
-      var posterEl = $(".movie-poster");
-      var movieEl = $(".movie-container");
-      var randomMovie = Math.floor(Math.random() * 20);
-      var movieTitle = data.results[randomMovie].title;
-      var overview = data.results[randomMovie].overview;
-      var posterPath = data.results[randomMovie].poster_path;
-      var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
-      posterEl.attr("src", posterURL);
-      movieEl.append(`<p>Title: ${movieTitle}</p>`);
-      movieEl.append("<section>Premise:</section>");
-      movieEl.append(`<p>${overview}</p>`);
-      movieEl.append(`<p>Some info</p>`);
+      displayMovieData(data);
     });
+}
+
+function displayMovieData(data) {
+  var posterEl = $(".movie-poster");
+  var movieEl = $(".movie-container");
+  var randomMovie = Math.floor(Math.random() * 20);
+  var movieTitle = data.results[randomMovie].title;
+  var overview = data.results[randomMovie].overview;
+  var posterPath = data.results[randomMovie].poster_path;
+  var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+  posterEl.attr("src", posterURL);
+  movieEl.append(`<p>Title: ${movieTitle}</p>`);
+  movieEl.append("<section>Premise:</section>");
+  movieEl.append(`<p>${overview}</p>`);
+  movieEl.append(`<p>Some info</p>`);
 }
