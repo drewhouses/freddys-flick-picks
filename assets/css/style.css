@@ -67,6 +67,28 @@ h1 {
     margin: 20px;
 }
 
+.movie-container {
+    margin-top: 100px;
+    text-align: left;
+    font-size: 20px;
+    color: whitesmoke;
+    margin-right: 100px;
+}
+
+.movie-container p {
+    margin-bottom: 20px;
+}
+
+.movie-poster {
+    float: left;
+    margin-left: 100px;
+    margin-right: 30px;
+}
+
+/* .generate-movie-btn {
+    clear: right;
+} */
+
 /* WORK ON LATER */
 /* .btn-container {
     height: 200px;
