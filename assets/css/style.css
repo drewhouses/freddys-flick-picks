@@ -1,3 +1,4 @@
+/* background-color: #001e09; freddy's green stripe*/
 body,
 html {
     height: 100%;
@@ -41,6 +42,7 @@ html {
     display: none;
 }
 
+/* Freddy's Flick Picks! */
 h1 {
     /*Added font size black color for header*/
 
@@ -53,5 +55,56 @@ h1 {
     padding-top: 10px;
     font-family: 'Butcherman', cursive;
 }
-
 /* background-color: #001e09; freddy's green stripe*/
+
+.form-container {
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.form-container p {
+    margin: 20px;
+}
+
+.movie-container {
+    margin-top: 100px;
+    text-align: left;
+    font-size: 20px;
+    color: whitesmoke;
+    margin-right: 100px;
+}
+
+.movie-container p {
+    margin-bottom: 20px;
+}
+
+.movie-poster {
+    float: left;
+    margin-left: 100px;
+    margin-right: 30px;
+}
+
+/* .generate-movie-btn {
+    clear: right;
+} */
+
+/* WORK ON LATER */
+/* .btn-container {
+    height: 200px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    background-color: #181818;
+}
+
+.last-btns {
+    color: aqua;
+} */
+
+
+
