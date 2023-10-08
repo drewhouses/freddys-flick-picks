@@ -7,7 +7,6 @@ var freddyCoverAudio = new Audio("./assets/audio/thriller-ambient-14563.mp3");
 var freddyMainAudio = new Audio("./assets/audio/messy.mp3");
 freddyCoverAudio.autoplay = true;
 freddyCoverAudio.play();
-// CURRENTLY USING THRILLER-AMBIENT & I SHOULD WARN YOU PT2 MP3
 
 // cover page button
 enterButtonEl.on("click", function () {
