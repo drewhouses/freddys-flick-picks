@@ -58,6 +58,6 @@ function displayMovieData(data) {
   posterEl.attr("src", posterURL);
   movieEl.append(`<p>Title: ${movieTitle}</p>`);
   movieEl.append(`<p>Release date: ${releaseDate}</p>`);
-  movieEl.append("<section>Premise:</section>");
+  movieEl.append("<p>Premise:</p>");
   movieEl.append(`<p>${overview}</p>`);
 }
