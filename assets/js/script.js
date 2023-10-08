@@ -17,6 +17,7 @@ enterButtonEl.on("click", function () {
 });
 
 generateBtnEl.on("click", function () {
+  $("section").remove();
   getRandomMovie();
 });
 
@@ -55,8 +56,8 @@ function displayMovieData(data) {
   
   console.log(randomMovie);
   posterEl.attr("src", posterURL);
-  movieEl.append(`<p>Title: ${movieTitle}</p>`);
-  movieEl.append(`<p>Release date: ${releaseDate}</p>`);
-  movieEl.append("<p>Premise:</p>");
-  movieEl.append(`<p>${overview}</p>`);
+  movieEl.append(`<section>Title: ${movieTitle}</section>`);
+  movieEl.append(`<section>Release date: ${releaseDate}</section>`);
+  movieEl.append("<section>Premise:</section>");
+  movieEl.append(`<section>${overview}</section>`);
 }
