@@ -50,11 +50,14 @@ function displayMovieData(data) {
   var randomMovie = Math.floor(Math.random() * 20);
   var movieTitle = data.results[randomMovie].title;
   var overview = data.results[randomMovie].overview;
+  var releaseDate = data.results[randomMovie].release_date;
   var posterPath = data.results[randomMovie].poster_path;
   var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+  
+  console.log(randomMovie);
   posterEl.attr("src", posterURL);
   movieEl.append(`<p>Title: ${movieTitle}</p>`);
+  movieEl.append(`<p>Release date: ${releaseDate}</p>`);
   movieEl.append("<section>Premise:</section>");
   movieEl.append(`<p>${overview}</p>`);
-  movieEl.append(`<p>Some info</p>`);
 }
