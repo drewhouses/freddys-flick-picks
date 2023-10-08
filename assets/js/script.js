@@ -39,7 +39,7 @@ function getRandomMovie() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       displayMovieData(data);
     });
 }
@@ -53,6 +53,7 @@ function displayMovieData(data) {
   var releaseDate = data.results[randomMovie].release_date;
   var posterPath = data.results[randomMovie].poster_path;
   var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+  var movieID = data.results[randomMovie].id;
   
   console.log(randomMovie);
   posterEl.attr("src", posterURL);
@@ -60,4 +61,28 @@ function displayMovieData(data) {
   movieEl.append(`<section>Release date: ${releaseDate}</section>`);
   movieEl.append("<section>Premise:</section>");
   movieEl.append(`<section>${overview}</section>`);
+
+  getStreamingSources(movieID);
+}
+
+function getStreamingSources(movieID) {
+  // https://api.watchmode.com/v1/title/movie-49018/details/?apiKey=9rW46Ospub1ydmP9KdRC7wYuxET3uielF9rVoVqm&append_to_response=sources
+
+  fetch(
+    `https://api.watchmode.com/v1/title/movie-${movieID}/details/?apiKey=9rW46Ospub1ydmP9KdRC7wYuxET3uielF9rVoVqm&append_to_response=sources`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then(function (response) {
+      return response.json();
+    })
+      .then(function (data) {
+        console.log("This is WatchMode data:\n");
+        console.log(data);
+      })
+
 }
