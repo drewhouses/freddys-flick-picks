@@ -85,9 +85,16 @@ h1 {
     margin-right: 30px;
 }
 
-/* .generate-movie-btn {
-    clear: right;
-} */
+.streaming-services {
+    color: antiquewhite;
+    margin-top: 100px;
+}
+
+.stream-title {
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: underline;
+}
 
 /* WORK ON LATER */
 /* .btn-container {

@@ -24,7 +24,7 @@ generateBtnEl.on("click", function () {
 function getRandomMovie() {
   var token =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OGY0ZWU1MDRiNWRiZDc5Y2YxZTQ5MTBkOTIzNDA5ZiIsInN1YiI6IjY1MTM4NmUxYTE5OWE2MDBlMWY5ZTNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PcGD68kcdBrYlLNbkoPTnlaqeM4K2hlc6WddR0Q1Nns";
-  var randomPageNumber = Math.floor(Math.random() * 40);
+  var randomPageNumber = Math.floor(Math.random() * 60);
   fetch(
     `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&with_original_language=en&with_genres=27&page=${randomPageNumber}&sort_by=popularity.desc`,
     {
@@ -54,7 +54,7 @@ function displayMovieData(data) {
   var posterPath = data.results[randomMovie].poster_path;
   var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
   var movieID = data.results[randomMovie].id;
-  
+
   console.log(randomMovie);
   posterEl.attr("src", posterURL);
   movieEl.append(`<section>Title: ${movieTitle}</section>`);
@@ -80,9 +80,34 @@ function getStreamingSources(movieID) {
     .then(function (response) {
       return response.json();
     })
-      .then(function (data) {
-        console.log("This is WatchMode data:\n");
-        console.log(data);
-      })
+    .then(function (data) {
+      console.log("This is WatchMode data:\n");
+      console.log(data.sources);
+      displayStreamingSources(data.sources);
+    });
+}
 
+function displayStreamingSources(sources) {
+  var sourceArray = [];
+  var streamingSource = "";
+  var streamingSourceEl = $(".streaming-services");
+
+  for (var i = 0; i < sources.length; i++) {
+    streamingSource = sources[i].name;
+
+    if (!sourceArray.includes(streamingSource)) {
+      sourceArray.push(streamingSource);
+    }
+  }
+
+  $("<section>", {
+    class: "stream-title",
+    text: " Catch this movive at the following streaming sites:",
+    appendTo: streamingSourceEl,
+  });
+
+  for (var j = 0; j < sourceArray.length; j++) {
+    streamingSourceEl.append("<section>" + sourceArray[j] + "</section>");
+  }
+  console.log(sourceArray);
 }
