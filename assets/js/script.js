@@ -24,7 +24,7 @@ generateBtnEl.on("click", function () {
 function getRandomMovie() {
   var token =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OGY0ZWU1MDRiNWRiZDc5Y2YxZTQ5MTBkOTIzNDA5ZiIsInN1YiI6IjY1MTM4NmUxYTE5OWE2MDBlMWY5ZTNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PcGD68kcdBrYlLNbkoPTnlaqeM4K2hlc6WddR0Q1Nns";
-  var randomPageNumber = Math.floor(Math.random() * 40);
+  var randomPageNumber = Math.floor(Math.random() * 60);
   fetch(
     `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&with_original_language=en&with_genres=27&page=${randomPageNumber}&sort_by=popularity.desc`,
     {
@@ -100,9 +100,11 @@ function displayStreamingSources(sources) {
     }
   }
 
-  streamingSourceEl.append(
-    "<section>Catch this movive at the following streaming sites:</section>"
-  );
+  $("<section>", {
+    class: "stream-title",
+    text: " Catch this movive at the following streaming sites:",
+    appendTo: streamingSourceEl,
+  });
 
   for (var j = 0; j < sourceArray.length; j++) {
     streamingSourceEl.append("<section>" + sourceArray[j] + "</section>");

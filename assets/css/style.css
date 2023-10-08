@@ -90,9 +90,11 @@ h1 {
     margin-top: 100px;
 }
 
-/* .generate-movie-btn {
-    clear: right;
-} */
+.stream-title {
+    font-weight: bold;
+    font-size: medium;
+    text-decoration: underline;
+}
 
 /* WORK ON LATER */
 /* .btn-container {
