@@ -4,7 +4,7 @@ var generateBtnEl = $(".generate-movie-btn");
 
 //audio section
 var freddyCoverAudio = new Audio("./assets/audio/thriller-ambient-14563.mp3");
-var freddyMainAudio = new Audio("./assets/audio/messy.mp3");
+var freddyMainAudio = new Audio("./assets/audio/welcome-to-my-nightmare.mp3");
 freddyCoverAudio.autoplay = true;
 freddyCoverAudio.play();
 
