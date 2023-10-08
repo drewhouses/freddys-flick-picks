@@ -54,7 +54,7 @@ function displayMovieData(data) {
   var posterPath = data.results[randomMovie].poster_path;
   var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
   var movieID = data.results[randomMovie].id;
-  
+
   console.log(randomMovie);
   posterEl.attr("src", posterURL);
   movieEl.append(`<section>Title: ${movieTitle}</section>`);
@@ -80,9 +80,32 @@ function getStreamingSources(movieID) {
     .then(function (response) {
       return response.json();
     })
-      .then(function (data) {
-        console.log("This is WatchMode data:\n");
-        console.log(data);
-      })
+    .then(function (data) {
+      console.log("This is WatchMode data:\n");
+      console.log(data.sources);
+      displayStreamingSources(data.sources);
+    });
+}
 
+function displayStreamingSources(sources) {
+  var sourceArray = [];
+  var streamingSource = "";
+  var streamingSourceEl = $(".streaming-services");
+
+  for (var i = 0; i < sources.length; i++) {
+    streamingSource = sources[i].name;
+
+    if (!sourceArray.includes(streamingSource)) {
+      sourceArray.push(streamingSource);
+    }
+  }
+
+  streamingSourceEl.append(
+    "<section>Catch this movive at the following streaming sites:</section>"
+  );
+
+  for (var j = 0; j < sourceArray.length; j++) {
+    streamingSourceEl.append("<section>" + sourceArray[j] + "</section>");
+  }
+  console.log(sourceArray);
 }
