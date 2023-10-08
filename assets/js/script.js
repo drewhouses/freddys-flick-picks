@@ -7,7 +7,6 @@ var freddyCoverAudio = new Audio("./assets/audio/thriller-ambient-14563.mp3");
 var freddyMainAudio = new Audio("./assets/audio/messy.mp3");
 freddyCoverAudio.autoplay = true;
 freddyCoverAudio.play();
-// CURRENTLY USING THRILLER-AMBIENT & I SHOULD WARN YOU PT2 MP3
 
 // cover page button
 enterButtonEl.on("click", function () {
@@ -18,6 +17,7 @@ enterButtonEl.on("click", function () {
 });
 
 generateBtnEl.on("click", function () {
+  $("section").remove();
   getRandomMovie();
 });
 
@@ -50,11 +50,14 @@ function displayMovieData(data) {
   var randomMovie = Math.floor(Math.random() * 20);
   var movieTitle = data.results[randomMovie].title;
   var overview = data.results[randomMovie].overview;
+  var releaseDate = data.results[randomMovie].release_date;
   var posterPath = data.results[randomMovie].poster_path;
   var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+  
+  console.log(randomMovie);
   posterEl.attr("src", posterURL);
-  movieEl.append(`<p>Title: ${movieTitle}</p>`);
+  movieEl.append(`<section>Title: ${movieTitle}</section>`);
+  movieEl.append(`<section>Release date: ${releaseDate}</section>`);
   movieEl.append("<section>Premise:</section>");
-  movieEl.append(`<p>${overview}</p>`);
-  movieEl.append(`<p>Some info</p>`);
+  movieEl.append(`<section>${overview}</section>`);
 }
