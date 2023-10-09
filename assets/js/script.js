@@ -1,12 +1,12 @@
 // Getting a handle on certain DOM elements
 var enterButtonEl = $(".cover-btn");
-var fredsound = ($("#fredSounds").muted = true);
 var generateBtnEl = $(".generate-movie-btn");
 
 //audio section
-var freddyCoverAudio = new Audio("./assets/audio/thriller-ambient-14563.mp3"); // Does not auto-play when visiting the site due to modern browser policies
+var freddyCoverAudio = new Audio("./assets/audio/coverpageaudio.mp3"); // Does not auto-play when visiting the site due to modern browser policies
 var freddyMainAudio = new Audio("./assets/audio/welcome-to-my-nightmare.mp3");
-freddyCoverAudio.autoplay = true;
+freddyCoverAudio.volume = .2;
+freddyCoverAudio.loop = true;
 freddyCoverAudio.play();
 
 // cover page button
