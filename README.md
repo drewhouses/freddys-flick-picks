@@ -2,65 +2,61 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This project demonstrates the usage of Javascript, CSS, HTML, and the usage of two server-side APIs to create a dynamic and interactive working webpage. The "Cover Page" has working audio and a hidden button on Freddy's body that when clicked, plays another audio and fades the cover page and button out, displaying the main page. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+On the main page, alongside the title and some text, this is where you can click on a random movie generator button that uses an API to pull data from an "online library" to display information about a horror themed movie. The second API used is to display the information of the available streaming platforms you can watch the movie on.
 
-## Table of Contents (Optional)
+## Links
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+GitHub Repository - https://github.com/drewhouses/freddys-flick-picks ||
+GitHub Deployed Application - <!-- INSERT DEPLOYED APPLICATION LINK -->
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+This is a screenshot of the working COVER PAGE
+[CoverPage](assets\images\FredCover.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+This screenshot is just incase the previous screenshot doesn't work.
+[CoverPage Secondary](https://i.gyazo.com/187b42f5102c323d79e3aceb8eabbb2a.png)
 
-    `    ![alt text](assets/images/screenshot.png)
-  
+
+This is a screenshot of the working MAIN PAGE
+[MainPage](assets\images\FredMain.png)
+
+This screenshot is just incase the previous screenshot doesn't work.
+[MainPage Secondary](https://i.gyazo.com/3bc7c23ccdbf05d5fb1e8716a784a499.png)
+
+
+This is a screenshot of the working PRODUCT of clicking the button
+[WorkingButton](assets\images\FredWorking.png)
+
+This screenshot is just incase the previous screenshot doesn't work.
+[WorkingButton Secondary](https://i.gyazo.com/da1e688bdf718974df43235faf7f4a87.png)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+-Sources-
+https://www.w3schools.com/ || 
+https://stackoverflow.com/ || 
+https://developer.mozilla.org/en-US/ || 
+https://www.youtube.com/ ||
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+-API-
+https://developer.themoviedb.org/docs || 
+https://api.watchmode.com/
 
-If you followed tutorials, include links to those here as well.
+-GitHub-
+Arturo Vargas - https://github.com/ArtVargas ||
+Charles Casas - https://github.com/drewhouses ||
+Jason Mason - https://github.com/Jaysahhn || 
 
 ## License
+MIT License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+Copyright (c) [2023] [Jason Mason, Arturo Vargas, Charles Casas]
 
----
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-:trophy: The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
