@@ -1,4 +1,4 @@
-# freddys-flick-picks
+# Freddy's Flick Picks
 
 ## Description
 
