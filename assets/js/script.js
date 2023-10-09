@@ -14,6 +14,7 @@ enterButtonEl.on("click", function () {
   freddyCoverAudio.pause();
   freddyMainAudio.play();
   $(".main").removeClass("hide"); // try to get title to render   $(".image-container").fadeOut(1200);
+  $(".image-container").fadeOut(1200);
 });
 
 generateBtnEl.on("click", function () {
