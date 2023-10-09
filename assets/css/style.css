@@ -43,12 +43,8 @@ html {
 
 /*Freddy's Flick Picks Position*/
 
-<<<<<<< HEAD
 header{
     /* Same background color with increased height of 100px */
-=======
-header {
->>>>>>> main
     height: 100px;
     background-color: #8a0303;
 }

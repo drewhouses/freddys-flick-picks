@@ -13,11 +13,7 @@ freddyCoverAudio.play();
 enterButtonEl.on("click", function () {
   freddyCoverAudio.pause();
   freddyMainAudio.play();
-<<<<<<< HEAD
   $(".main").removeClass("hide"); // try to get title to render asap
-=======
-  $(".main").removeClass("hide");
->>>>>>> main
   $(".image-container").fadeOut(1200);
 });
 
@@ -104,7 +100,7 @@ function displayStreamingSources(sources) {
 
   $("<section>", {
     class: "stream-title",
-    text: " Catch this movive at the following streaming sites:",
+    text: " Catch this movie at the following streaming sites:",
     appendTo: streamingSourceEl,
   });
 
