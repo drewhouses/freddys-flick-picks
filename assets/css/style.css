@@ -42,17 +42,26 @@ html {
     display: none;
 }
 
+/*Freddy's Flick Picks Position*/
+
+header{
+    height: 100px;
+    background-color: #8a0303;
+    
+
+
+}
+
 /* Freddy's Flick Picks! */
 h1 {
     /*Added font size black color for header*/
 
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
-    background-color: #8a0303;
     color: whitesmoke;
     font-weight: bold;
-    height: 50px;
-    padding-top: 10px;
+    height: 55px;
+    padding-top: 15px;
     font-family: 'Butcherman', cursive;
 }
 /* background-color: #001e09; freddy's green stripe*/
@@ -95,6 +104,8 @@ h1 {
     font-size: medium;
     text-decoration: underline;
 }
+
+
 
 /* WORK ON LATER */
 /* .btn-container {
