@@ -13,7 +13,7 @@ freddyCoverAudio.play();
 enterButtonEl.on("click", function () {
   freddyCoverAudio.pause();
   freddyMainAudio.play();
-  $(".main").removeClass("hide");
+  $(".main").removeClass("hide"); // try to get title to render asap
   $(".image-container").fadeOut(1200);
 });
 
@@ -56,7 +56,6 @@ function displayMovieData(data) {
   var posterURL = `https://image.tmdb.org/t/p/w500/${posterPath}`;
   var movieID = data.results[randomMovie].id;
 
-  console.log(randomMovie);
   posterEl.attr("src", posterURL);
   movieEl.append(`<section>Title: ${movieTitle}</section>`);
   movieEl.append(`<section>Release date: ${releaseDate}</section>`);
@@ -101,7 +100,7 @@ function displayStreamingSources(sources) {
 
   $("<section>", {
     class: "stream-title",
-    text: " Catch this movive at the following streaming sites:",
+    text: " Catch this movie at the following streaming sites:",
     appendTo: streamingSourceEl,
   });
 
