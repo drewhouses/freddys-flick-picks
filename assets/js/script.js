@@ -1,10 +1,11 @@
+// Getting a handle on certain DOM elements
 var enterButtonEl = $(".cover-btn");
 var fredsound = ($("#fredSounds").muted = true);
 var generateBtnEl = $(".generate-movie-btn");
 
 //audio section
-var freddyCoverAudio = new Audio("./assets/audio/thriller-ambient-14563.mp3");
-var freddyMainAudio = new Audio("./assets/audio/messy.mp3");
+var freddyCoverAudio = new Audio("./assets/audio/thriller-ambient-14563.mp3"); // Does not auto-play when visiting the site due to modern browser policies
+var freddyMainAudio = new Audio("./assets/audio/welcome-to-my-nightmare.mp3");
 freddyCoverAudio.autoplay = true;
 freddyCoverAudio.play();
 
@@ -66,8 +67,6 @@ function displayMovieData(data) {
 }
 
 function getStreamingSources(movieID) {
-  // https://api.watchmode.com/v1/title/movie-49018/details/?apiKey=9rW46Ospub1ydmP9KdRC7wYuxET3uielF9rVoVqm&append_to_response=sources
-
   fetch(
     `https://api.watchmode.com/v1/title/movie-${movieID}/details/?apiKey=9rW46Ospub1ydmP9KdRC7wYuxET3uielF9rVoVqm&append_to_response=sources`,
     {
@@ -81,8 +80,7 @@ function getStreamingSources(movieID) {
       return response.json();
     })
     .then(function (data) {
-      console.log("This is WatchMode data:\n");
-      console.log(data.sources);
+      // Passing streaming sources info to display function
       displayStreamingSources(data.sources);
     });
 }
@@ -109,5 +107,4 @@ function displayStreamingSources(sources) {
   for (var j = 0; j < sourceArray.length; j++) {
     streamingSourceEl.append("<section>" + sourceArray[j] + "</section>");
   }
-  console.log(sourceArray);
 }
