@@ -13,7 +13,7 @@ freddyCoverAudio.play();
 enterButtonEl.on("click", function () {
   freddyCoverAudio.pause();
   freddyMainAudio.play();
-  $(".main").removeClass("hide"); // try to get title to render   $(".image-container").fadeOut(1200);
+  $(".main").removeClass("hide");
   $(".image-container").fadeOut(1200);
 });
 
@@ -22,6 +22,7 @@ generateBtnEl.on("click", function () {
   getRandomMovie();
 });
 
+// main page functions
 function getRandomMovie() {
   var token =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OGY0ZWU1MDRiNWRiZDc5Y2YxZTQ5MTBkOTIzNDA5ZiIsInN1YiI6IjY1MTM4NmUxYTE5OWE2MDBlMWY5ZTNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PcGD68kcdBrYlLNbkoPTnlaqeM4K2hlc6WddR0Q1Nns";
@@ -40,7 +41,6 @@ function getRandomMovie() {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data);
       displayMovieData(data);
     });
 }
@@ -66,6 +66,7 @@ function displayMovieData(data) {
   getStreamingSources(movieID);
 }
 
+// streaming sources and displaying the data
 function getStreamingSources(movieID) {
   fetch(
     `https://api.watchmode.com/v1/title/movie-${movieID}/details/?apiKey=9rW46Ospub1ydmP9KdRC7wYuxET3uielF9rVoVqm&append_to_response=sources`,
