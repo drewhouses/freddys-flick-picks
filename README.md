@@ -14,21 +14,21 @@ GitHub Deployed Project Application - https://drewhouses.github.io/freddys-flick
 ## Usage
 
 This is a screenshot of the working COVER PAGE
-[CoverPage](assets\images\FredCover.png)
+[CoverPage](./assets/images/FredCover.png)
 
 This screenshot is just incase the previous screenshot doesn't work.
 [CoverPage Secondary](https://i.gyazo.com/187b42f5102c323d79e3aceb8eabbb2a.png)
 
 
 This is a screenshot of the working MAIN PAGE
-[MainPage](assets\images\FredMain.png)
+[MainPage](./assets/images/FredMain.png)
 
 This screenshot is just incase the previous screenshot doesn't work.
 [MainPage Secondary](https://i.gyazo.com/3bc7c23ccdbf05d5fb1e8716a784a499.png)
 
 
 This is a screenshot of the working PRODUCT of clicking the button
-[WorkingButton](assets\images\FredWorking.png)
+[WorkingButton](./assets/images/FredWorking.png)
 
 This screenshot is just incase the previous screenshot doesn't work.
 [WorkingButton Secondary](https://i.gyazo.com/da1e688bdf718974df43235faf7f4a87.png)
