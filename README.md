@@ -8,8 +8,8 @@ On the main page, alongside the title and some text, this is where you can click
 
 ## Links
 
-GitHub Repository - https://github.com/drewhouses/freddys-flick-picks ||
-GitHub Deployed Application - <!-- INSERT DEPLOYED APPLICATION LINK -->
+GitHub Project Repository - https://github.com/drewhouses/freddys-flick-picks ||
+GitHub Deployed Project Application - https://drewhouses.github.io/freddys-flick-picks/
 
 ## Usage
 
