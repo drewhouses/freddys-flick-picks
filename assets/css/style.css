@@ -44,7 +44,6 @@ html {
 /*Freddy's Flick Picks Position*/
 
 header{
-    /* Same background color with increased height of 100px */
     height: 100px;
     background-color: #8a0303;
 }
@@ -94,7 +93,7 @@ h1 {
 
 .streaming-services {
     color: antiquewhite;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .stream-title {
@@ -103,16 +102,38 @@ h1 {
     text-decoration: underline;
 }
 
-/*Generate movie button*/
-/*Added shadow box for glow effect*/
-
 .generate-movie-btn{
     height: 50px;
     background-color: #005E0A; 
     box-shadow: 0 0 5px darkred, 0 0 25px darkred;
-    
+    color: whitesmoke;
+}
+
+footer {
+    height: 200px;
 }
 
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 992px) {
+    header {
+    }
+  }
+  
+  /* Large smartphones - navbar changes color */
+  @media screen and (max-width: 768px) {
+    nav {
+    }
+  }
+  
+  /* Small smartphones - image placeholders change color */
+  @media screen and (max-width: 576px) {
+    h1{
+        font-size: 40px;
+    }
+    
+    .movie-poster {
+        margin-left: 20px;
+    }
 
-/* @MEDIA? */
+  }
